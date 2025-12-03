@@ -1,0 +1,964 @@
+.dashboard-container {
+  margin-top: 80px;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Hero */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px;
+  background: linear-gradient(90deg, #eef2ff 0%, #ffffff 100%);
+}
+.hero-text { max-width: 50%; }
+.hero-text h1 { font-size: 40px; font-weight: bold; margin-bottom: 20px; }
+.hero-text h1 span { color: #4f46e5; }
+.hero-text p { font-size: 16px; color: #555; margin-bottom: 30px; }
+.hero-buttons { display: flex; gap: 15px; }
+.btn-primary, .btn-outline {
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.btn-primary { background: #4f46e5; color: white; border: none; }
+.btn-outline { background: white; border: 1px solid #ccc; }
+.hero-image {
+  width: 45%; height: 280px;
+  background: #eef2ff;
+  border: 2px solid #4f46e5;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(79, 70, 229, 0.5);
+}
+.hero-image img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Features */
+.features-section { padding: 60px 80px; text-align: center; background: #fff; }
+.features-section h2 span { color: #4f46e5; }
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+.feature-card {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.feature-icon {
+  width: 60px; height: 60px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, #6366f1, #a78bfa);
+  color: #fff; font-size: 24px;
+}
+
+/* How It Works */
+.how-section { padding: 60px 80px; background: #f9fafb; text-align: center; }
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+.how-card {
+  background: #fff; padding: 30px 20px;
+  border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.how-icon, .how-number {
+  margin-bottom: 10px;
+}
+.how-icon {
+  width: 60px; height: 60px; margin: 0 auto;
+  background: linear-gradient(135deg, #6366f1, #a78bfa);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 24px;
+}
+.how-number { font-weight: bold; color: #4f46e5; }
+
+/* Templates */
+.templates-section { padding: 60px 80px; text-align: center; background: #fff; }
+.templates-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 25px; margin-bottom: 30px;
+}
+.template-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  text-align: left;
+}
+.template-tag { font-size: 12px; font-weight: bold; color: #4f46e5; margin-bottom: 8px; }
+.template-footer { display: flex; justify-content: space-between; align-items: center; }
+.template-footer button {
+  border: none; background: transparent; color: #4f46e5; font-weight: bold; cursor: pointer;
+}
+.browse-btn button {
+  background: #1e3a8a; color: #fff; padding: 12px 24px;
+  border-radius: 6px; border: none; font-weight: bold; cursor: pointer;
+}
+
+/* Testimonials */
+.testimonials-section { background: #f9fafb; padding: 60px 80px; text-align: center; }
+.testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+.testimonial-card {
+  background: #fff; border-radius: 12px; padding: 25px; text-align: left;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.stars { color: #fbbf24; margin-bottom: 12px; }
+.testimonial-card .role { color: #666; margin: 0; font-size: 13px; }
+.testimonial-card .company { color: #4f46e5; margin: 0; font-size: 13px; }
+
+/* Footer */
+.footer-cta {
+  background: linear-gradient(90deg, #1e3a8a, #4f46e5);
+  color: white; padding: 40px 80px; text-align: center;
+}
+.footer-buttons { display: flex; justify-content: center; gap: 12px; margin: 20px 0; }
+.btn-white {
+  background: white; color: #4f46e5; font-weight: bold;
+  padding: 12px 24px; border-radius: 6px; border: none;
+}
+.btn-outline-white {
+  background: transparent; border: 1px solid white; color: white;
+  padding: 12px 24px; border-radius: 6px;
+}
+.footer-info { display: flex; justify-content: center; gap: 20px; color: #c7d2fe; }
+
+.footer-bottom {
+  background: #1e3a8a; color: white; padding: 40px 80px;
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px;
+}
+.footer-brand p { color: #cbd5e1; }
+.footer-column ul { list-style: none; padding: 0; color: #cbd5e1; }
+.footer-column li { margin-bottom: 6px; }
+.social-icons { display: flex; gap: 12px; margin-top: 12px; }
+
+
+.generator-container {
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: flex-start; /* Aligns content from top */
+  width: 100vw;
+  min-height: calc(100vh - 70px); /* Adjust based on your navbar height */
+  background-color: #f9fafb; /* Optional background */
+  padding: 20px 40px 20px 40px; /* top 0, right 10px, bottom 20px, left 10px */
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+/* Header/Info Card */
+.header-card {
+ width: 100%;
+  max-width: 1200px; /* Keeps content centered and readable */
+  margin: 0 auto;
+  padding: 0 10px 20px 10px;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  background-color: #fff; /* Optional white card background */
+  border-radius: 12px; /* Optional for smooth edges */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Optional subtle shadow */
+}
+
+/* Keep your existing h2 and p styles inside the card */
+.header-card h2 {
+  margin-top: 15px;
+  margin-bottom: 4px; /* reduced from 5px */
+}
+
+.header-card p {
+  margin-top: 0;      /* ensures no extra top margin */
+  margin-bottom: 16px; /* optional, reduced from 20px */
+  color: #555;
+}
+
+
+.generator-grid {
+  display: flex;
+  gap: 12px; /* reduced gap */
+  flex-wrap: wrap;
+  overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+/* Left and Right Cards */
+.content-type-card,
+.config-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 2px solid #6b46ff;
+  padding: 12px;
+  box-sizing: border-box;
+  overflow: hidden; /* scroll internally if content overflows */
+}
+
+.content-type-card {
+  flex: 1; /* left card smaller */
+  min-width: 0; /* prevent overflow */
+}
+
+/* Reduce space between heading and paragraph inside left card */
+.content-type-card h3 {
+  margin-top: 10px;
+  margin-bottom: 4px; /* reduced from 5px */
+}
+
+.content-type-card p {
+  margin-top: 0;      /* ensures no extra top margin */
+  margin-bottom: 16px; /* optional, reduced from 20px */
+  color: #555;
+}
+
+
+.config-card {
+  flex: 2; /* right card larger */
+  min-width: 0; /* prevent overflow */
+  padding: 16px;
+}
+
+.config-card h3 {
+  margin-top: 10px;
+  margin-bottom: 4px; /* reduced from 5px */
+}
+
+.config-card p {
+  margin-top: 0;      /* ensures no extra top margin */
+  margin-bottom: 16px; /* optional, reduced from 20px */
+  color: #555;
+}
+
+/* Form and Type Cards */
+.type-card {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 6px; /* reduced padding */
+  margin-bottom: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px; /* reduced gap */
+  background: #fff;
+  transition: all 0.2s ease;
+  font-size: 13px; /* smaller font */
+}
+
+.type-card.active {
+  border: 2px solid #6b46ff;
+  background: #f3f0ff;
+}
+
+.type-card:hover {
+  transform: translateY(-2px);
+}
+
+.type-icon {
+  width: 50px;       /* wider than height for oval */
+  height: 28px;      /* smaller height */
+  border-radius: 50%; /* makes it oval */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+
+.type-description {
+  font-size: 11px;
+}
+
+.config-card label {
+  display: block;
+  margin-bottom: 8px; /* reduced spacing */
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.config-card input[type="text"],
+.config-card textarea,
+.config-card select {
+  width: 100%;
+  padding: 6px; /* smaller padding */
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-top: 4px;
+  font-size: 13px;
+}
+
+.config-card textarea {
+  min-height: 60px;
+}
+
+.tone-section {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-top: 12px;
+}
+
+.config-card button {
+  background: #6b46ff;
+  color: #fff;
+  padding: 10px; /* smaller */
+  font-size: 14px; /* reduced font */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  transition: background 0.2s ease;
+}
+
+.config-card button:hover {
+  background: #553cfa;
+}
+
+/* Global CSS for TemplateLibrary component */
+
+/* General layout */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* hide global horizontal scrollbar */
+}
+
+.template-library-container {
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: flex-start; /* Aligns content from top */
+  width: 100vw;
+  min-height: calc(100vh - 70px); /* Adjust based on your navbar height */
+  background-color: #f9fafb; /* Optional background */
+  padding: 20px 40px 20px 40px; /* top 0, right 10px, bottom 20px, left 10px */
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.template-library {
+  width: 100%;
+  max-width: 1200px; /* Keeps content centered and readable */
+  margin: 0 auto;
+  padding: 0 10px 20px 10px;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  background-color: #fff; /* Optional white card background */
+  border-radius: 12px; /* Optional for smooth edges */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Optional subtle shadow */
+}
+
+
+
+.template-library h2 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.template-library p {
+  margin-top: 0px;
+  margin-bottom: 16px;
+  color: #555;
+}
+/* Controls container */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.controls input[type='text'] {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  flex: 0.8;
+  min-width: 150px;
+}
+
+.controls select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  min-width: 180px;
+}
+
+.controls .create-template-btn {
+  padding: 10px 16px;
+  background: #967ff4ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  white-space: nowrap;
+}
+
+.controls .create-template-btn:hover {
+  background: #5532cc;
+}
+
+/* Stats Cards */
+.stats-cards {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.stats-card {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  min-width: 212px;
+  transition: transform 0.2s;
+  cursor: default;
+}
+
+.stats-card:hover {
+  transform: scale(1.05);
+}
+
+.stats-card .value {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.stats-card .label {
+  margin-top: 5px;
+  color: #555;
+}
+
+/* Template Grid */
+.template-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Global CSS for TemplateCard component */
+
+.template-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.template-card .category {
+  background: #f0f0f0;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.template-card h3 {
+  margin: 10px 0 5px 0;
+}
+
+.template-card p.description {
+  color: #666;
+  font-size: 14px;
+}
+
+.template-card p.stats {
+  font-size: 13px;
+  margin: 5px 0;
+}
+
+.template-card .tags {
+  margin: 10px 0;
+}
+
+.template-card .tags span {
+  background: #eef2ff;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.template-card button {
+  width: 100%;
+  padding: 10px;
+  background: #2e397aff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+/* Global CSS for CreateTemplate component */
+
+.create-template-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 700px;       /* fixed width */
+  max-width: 100%;    /* responsive on smaller screens */
+  height: 500px;      /* fixed height */
+  border: 2px solid #ccc;  /* neutral border */
+  box-shadow: none;   /* no shadow */
+  overflow: hidden;     /* scroll if content exceeds height */
+  box-sizing: border-box;
+  margin: 10px 10px;  /* center horizontally with some top/bottom space */
+  margin-left: 320px;
+}
+
+.create-template-card h1 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: left;
+  font-size: 26px;   /* reduced from default (probably ~32px) */
+  font-weight: 700;
+  color: #1e1e1e;    /* optional: clean dark gray for professional look */
+}
+
+
+
+
+.create-template-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.create-template-card input,
+.create-template-card select,
+.create-template-card textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.create-template-card textarea {
+  min-height: 50px;
+}
+
+.create-template-card button {
+  padding: 14px;
+  background-color: #6b46ff;
+  color: #fff;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-template-card button:hover {
+  background-color: #5a32d1;
+}
+
+.create-template-card p.success {
+  color: green;
+  font-weight: bold;
+  text-align: center;
+}
+
+.navbar {
+  width: 95vw;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+}
+
+.navbar-logo {
+  font-weight: bold;
+  font-size: 18px;
+  color: #4f46e5;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 30px;
+  font-size: 14px;
+  flex: 1;
+  justify-content: center;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #333;
+  transition: 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: #4f46e5;
+}
+
+.navbar-right {
+  margin-left: auto;
+}
+
+.navbar-btn {
+  border: 1px solid #4f46e5;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: white;
+  color: #4f46e5;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+.navbar-btn:hover {
+  background-color: #4f46e5;
+  color: white;
+}
+
+/* Overlay background */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Popup card */
+.popup-box {
+  background-color: #ffffff;
+  padding: 40px 35px;
+  border-radius: 14px;
+  width: 380px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  animation: fadeScale 0.4s ease;
+  text-align: left;
+  position: relative;
+}
+
+/* Header icon */
+.login-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+/* Popup title */
+.popup-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #333;
+  text-align: center;
+}
+
+/* Form group */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+/* Input with icon */
+.input-icon {
+  position: relative;
+}
+
+.input-icon .icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.input-icon input {
+  width: 100%;
+  padding: 10px 12px 10px 36px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.input-icon input:focus {
+  border-color: #6c63ff;
+  outline: none;
+}
+
+/* Button */
+.btn-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn {
+  width: 100%;
+  background-color: #6c63ff;
+  color: #fff;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #574fd6;
+}
+
+/* Fade + Scale animation */
+@keyframes fadeScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.profile-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar-profile-small {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.navbar-username-below {
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 100%; /* directly below username */
+  margin-top: 6px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 2px 2px;
+  z-index: 10;
+}
+
+.profile-dropdown button {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+  width: 50%;
+  text-align: center;
+}
+
+.profile-dropdown button:hover {
+  color: #ff0000;
+}
+
+
+.navbar-username-below {
+  margin-top: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+}
+
+/* ===== Template Detail Container ===== */
+
+
+/* Outer container – centers the card */
+.template-detail-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 700px;       /* fixed width */
+  max-width: 100%;    /* responsive on smaller screens */
+  height: 500px;      /* fixed height */
+  border: 2px solid #6b46ff;  /* neutral border */
+  box-shadow: none;   /* no shadow */
+  overflow: hidden;     /* scroll if content exceeds height */
+  box-sizing: border-box;
+  margin: 10px 10px;  /* center horizontally with some top/bottom space */
+  margin-left: 320px;         /* light background (optional) */
+}
+/* Container to center the card */
+
+
+/* Card styling */
+.template-detail-card {
+  background: #ffffff;
+  padding: 30px 40px;        /* proper spacing inside the card */
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  width: 80%;
+  max-width: 750px;          /* controls right side whitespace */
+  margin: 0 auto;            /* centers the card */
+  font-family: "Inter", sans-serif;
+  margin: 35px auto 0 auto; 
+}
+
+/* Title */
+.template-detail-card h1,
+.template-detail-card h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1e1e1e;
+}
+
+/* Text spacing */
+.template-detail-card p {
+  font-size: 16px;
+  margin: 8px 0;
+  color: #333;
+}
+
+/* Buttons area */
+.template-detail-buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+}
+
+
+
+
+.template-detail-card:hover {
+  transform: translateY(-3px);
+}
+
+/* ===== Headings ===== */
+.template-detail-card h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 20px;
+}
+
+/* ===== Text Styling ===== */
+.template-detail-card p {
+  font-size: 1rem;
+  color: #374151;
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.template-detail-card strong {
+  color: #111827;
+}
+
+/* ===== Buttons ===== */
+.template-detail-buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+}
+
+.template-detail-buttons button {
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.template-detail-buttons button:hover {
+  background-color: #1d4ed8;
+}
+
+.template-detail-buttons button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* ===== Status Messages ===== */
+.template-detail-loading {
+  color: #2563eb;
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 50px;
+}
+
+.template-detail-error {
+  color: #dc2626;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.template-detail-success {
+  color: #16a34a;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.template-detail-empty {
+  text-align: center;
+  color: #6b7280;
+  font-size: 1rem;
+  padding: 40px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .template-detail-card {
+    padding: 25px;
+  }
+
+  .template-detail-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .template-detail-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .template-detail-buttons button {
+    width: 100%;
+  }
+}
+

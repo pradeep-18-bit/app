@@ -1,0 +1,308 @@
+/* ===== Page Container ===== */
+.history-container {
+  display: flex;
+  justify-content: center; /* Centers the page content horizontally */
+  align-items: flex-start; /* Aligns content from top */
+  width: 100vw;
+  min-height: calc(100vh - 70px); /* Adjust if your navbar height differs */
+  background-color: #f9fafb;
+  padding: 20px 30px 20px 70px !important;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Remove horizontal scroll */
+  overflow-y: auto; /* Keep vertical scroll */
+}
+
+/* ===== Page Layout ===== */
+.history-page {
+  width: 100%;
+  max-width: 1200px;
+  background: #fff;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding-bottom: 0;
+  padding-top: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* ===== Header ===== */
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 25px 20px 25px;
+}
+
+.history-header h2 {
+  margin-top: 15px;
+  margin-bottom: 4px;
+}
+
+.history-header p {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #555;
+}
+
+/* ===== Generate Button ===== */
+.generate-btn {
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.generate-btn:hover {
+  background-color: #4338ca;
+}
+
+/* ===== Filters ===== */
+.history-filters {
+  display: flex;
+  gap: 12px;
+  margin: 0 25px 25px 25px;
+}
+
+.history-filters input {
+  flex: 0 0 60%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.history-filters select {
+  flex: 0 0 18%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* ===== List Section ===== */
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0 25px 30px 25px;
+}
+
+/* ===== Each Item ===== */
+.history-item {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: box-shadow 0.2s ease;
+}
+
+.history-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== Info Section ===== */
+.history-info {
+  flex: 1;
+}
+
+.history-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.history-top h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #111827;
+}
+
+.status {
+  font-size: 13px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.status.published {
+  background: #16a34a;
+}
+.status.draft {
+  background: #f59e0b;
+}
+.status.approved {
+  background: #3b82f6;
+}
+
+/* ===== Meta & Preview ===== */
+.history-meta {
+  display: flex;
+  gap: 15px;
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.history-preview {
+  margin-top: 6px;
+  color: #374151;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ===== Actions ===== */
+.history-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.icon {
+  cursor: pointer;
+  color: #555;
+  transition: color 0.2s;
+}
+
+.icon:hover {
+  color: #111;
+}
+
+.icon.delete:hover {
+  color: #e11d48;
+}
+
+/* ===== Empty State ===== */
+.empty {
+  text-align: center;
+  color: #6b7280;
+  font-size: 15px;
+  margin-top: 80px;
+}
+
+/* ===== Modal Styles (Improved) ===== */
+.modal-overlay {
+  position: fixed;
+  top: 70px; /* Adjust to match navbar height */
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 70px);
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  z-index: 9999;
+  overflow-y: auto;
+}
+
+.modal-content {
+  background: #fff;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 14px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  max-height: 85vh;
+  overflow: hidden;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 25px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.modal-header h3 {
+  font-size: 20px;
+  color: #111827;
+  margin: 0;
+  font-weight: 600;
+}
+
+.close-icon {
+  cursor: pointer;
+  color: #666;
+  font-size: 1.4rem;
+  transition: color 0.2s;
+}
+
+.close-icon:hover {
+  color: #000;
+}
+
+.modal-meta {
+  display: flex;
+  gap: 15px;
+  color: #6b7280;
+  font-size: 14px;
+  margin: 10px 25px;
+}
+
+.modal-body {
+  flex: 1;
+  padding: 15px 25px 25px;
+  color: #374151;
+  font-size: 15px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  overflow-y: auto;
+}
+
+/* ===== Animation ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .history-page {
+    width: 95%;
+    box-shadow: none;
+  }
+
+  .history-filters {
+    flex-direction: column;
+    margin: 10px 20px;
+  }
+
+  .history-header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 15px 20px;
+  }
+
+  .modal-content {
+    width: 95%;
+    height: auto;
+    max-height: 85vh;
+  }
+
+  .modal-body {
+    font-size: 14px;
+  }
+}

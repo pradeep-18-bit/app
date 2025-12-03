@@ -1,0 +1,209 @@
+/* Pricing.css */
+
+/* ===== Full Page Container ===== */
+
+
+/* ===== Title & Subtitle ===== */
+.pricing-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0;           /* removes extra top and bottom space */
+  padding: 2px 0;      /* very small padding above and below */
+  color: #111827;
+}
+
+
+.pricing-subtitle {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 6px;  /* slightly reduced margin for tighter spacing */
+  padding-bottom: 8px; /* adds gentle space below subtitle */
+}
+
+
+/* ===== Pricing Cards Container ===== */
+/* ===== Full Page Container ===== */
+.pricing-container {
+  width: 100vw;
+  height: calc(100vh - 70px); /* full height minus navbar */
+  margin: 0 auto;
+  padding: 5px 10px 5px 10px; /* minimal padding */
+  font-family: sans-serif;
+  box-sizing: border-box;
+  background-color: #f9fafb;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden; /* no scroll bar */
+}
+
+/* ===== Pricing Cards Container ===== */
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  gap: 10px;  /* reduced gap to save space */
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* ===== Individual Card ===== */
+.pricing-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  padding: 10px 12px; /* reduced padding */
+  width: 250px;        /* reduced width */
+  min-height: 380px;   /* slightly taller than before */
+  height: auto;        /* auto height to fit content */
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+  font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+
+.pricing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Badge ===== */
+.popular .badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #6366f1;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 50px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* ===== Plan Titles ===== */
+.pricing-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+  color: #111827;
+  text-align: center;
+}
+
+/* ===== Plan Price ===== */
+.plan-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 3px 0;
+  text-align: center;
+}
+
+.plan-price span {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* ===== Plan Description ===== */
+.plan-description {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block;
+  margin: 6px auto 10px;
+}
+
+.btn-free {
+  background-color: #e5e7eb;
+  color: #111827;
+}
+
+.btn-free:hover {
+  background-color: #d1d5db;
+}
+
+.btn-pro {
+  background-color: #6366f1;
+  color: #ffffff;
+}
+
+.btn-pro:hover {
+  background-color: #4f46e5;
+}
+
+.btn-enterprise {
+  background-color: #10b981;
+  color: #ffffff;
+}
+
+.btn-enterprise:hover {
+  background-color: #059669;
+}
+
+/* ===== List Items (Left Aligned with Padding) ===== */
+.pricing-card ul {
+  list-style: none;
+  padding: 0 0 0 6px; /* added slight left padding */
+  margin: 0;
+  flex-grow: 1;
+  overflow: hidden;
+  text-align: left; /* align entire list left */
+}
+
+.pricing-card ul li {
+  position: relative;
+  margin: 3px 0;
+  font-size: 0.8rem;
+  color: #4b5563;
+  padding-left: 18px;
+  line-height: 1.4rem;
+  word-break: break-word;
+}
+
+.pricing-card ul li::marker {
+  content: none;
+}
+
+.pricing-card ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #10b981;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+/* ===== Pricing Card Size (applies to all screens) ===== */
+.pricing-card {
+  width: 260px;        /* narrower card */
+  height: auto;        /* auto height so content fits */
+  min-height: 300px;   /* taller card */
+  max-height: none;
+  padding: 14px 16px;
+  overflow: visible;
+}
+
+/* ===== Responsive adjustments ===== */
+@media (max-width: 900px) {
+  .pricing-card {
+    width: 90%; /* for smaller screens */
+  }
+}

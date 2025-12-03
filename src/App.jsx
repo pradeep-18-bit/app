@@ -6,48 +6,62 @@ import {
   Navigate,
   useLocation,
 } from "react-router-dom";
+
 import Navbar from "./components/Navbar.jsx";
 import Dashboard from "./components/Dashboard/Dashboard.jsx";
+
+// ✅ Admin
 import AdminDashboardHome from "./components/AdminDashboard/AdminDashboardHome.jsx";
 import AdminLayout from "./components/AdminDashboard/AdminLayout.jsx";
 import AdminAnalyticsDashboard from "./components/AdminDashboard/AdminAnalyticsDashboard.jsx";
 import AdminUsersData from "./components/AdminDashboard/AdminUsersData.jsx";
 import AdminHistory from "./components/AdminDashboard/AdminHistory.jsx";
 import AdminContentGenerator from "./components/AdminDashboard/AdminContentGenerator.jsx";
-import AdminContentHistory from "./components/AdminDashboard/AdminContentHIstory.jsx";
+import AdminContentHistory from "./components/AdminDashboard/AdminContentHistory.jsx";
+import AdminProfile from "./components/AdminDashboard/AdminProfile.jsx";
+
+// ✅ Auth
 import Login from "./components/Login/Login.jsx";
 import Register from "./components/Register/Register.jsx";
 import ResetPassword from "./components/ResetPassword.jsx";
 import SetNewPassword from "./components/SetNewPassword.jsx";
 import VerifyOtp from "./components/VerifyOtp.jsx";
+
+// ✅ User Features
 import ContentGenerator from "./components/ContentGenerator/ContentGenerator.jsx";
 import TemplateLibrary from "./components/TemplateLibrary/TemplateLibrary.jsx";
 import TemplateDetail from "./components/TemplateLibrary/TemplateDetail.jsx";
 import TemplateEdit from "./components/TemplateLibrary/TemplateEdit.jsx";
 import CreateTemplate from "./components/CreateTemplate/CreateTemplate.jsx";
 import ContentHistory from "./components/ContentHistory/ContentHistory.jsx";
-import AdminProfile from "./components/AdminDashboard/AdminProfile.jsx";
-import Pricing from "./components/Pricing/pricing.jsx";
+
+// ✅ 🔥 FIXED HERE (CASE-SENSITIVE)
+import Pricing from "./components/Pricing/Pricing.jsx";
+
+// ✅ Settings
 import Profile from "./components/Profile";
 import Preferences from "./components/Preferences";
 import Notifications from "./components/Notifications";
 import Security from "./components/Security";
 import Billing from "./components/Billing";
-import Api from "./components/API";
+import Api from "./components/Api";
+
 import "./App.css";
 
 // ✅ PrivateRoute
 const PrivateRoute = ({ children, allowedRole }) => {
   const user = JSON.parse(localStorage.getItem("currentUser"));
+
   if (!user) return <Navigate to="/login" />;
   if (allowedRole && user.role !== allowedRole) return <Navigate to="/" />;
+
   return children;
 };
 
 const AppWrapper = () => {
   const location = useLocation();
 
-  // ✅ Hide Navbar for Auth and Admin pages
+  // ✅ Hide Navbar for Auth & Admin pages
   const hideNavbar =
     [
       "/login",
@@ -75,7 +89,8 @@ const AppWrapper = () => {
       {!hideNavbar && <Navbar />}
       <div style={{ marginTop: hideNavbar ? 0 : "70px" }}>
         <Routes>
-<Route path="/" element={<Navigate to="/dashboard" replace />} />
+          <Route path="/" element={<Navigate to="/dashboard" replace />} />
+
           {/* Auth */}
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
@@ -85,13 +100,13 @@ const AppWrapper = () => {
 
           {/* User Protected */}
           <Route
-  path="/dashboard"
-  element={
-    <PrivateRoute>
-      <Dashboard />
-    </PrivateRoute>
-  }
-/>
+            path="/dashboard"
+            element={
+              <PrivateRoute>
+                <Dashboard />
+              </PrivateRoute>
+            }
+          />
 
           <Route
             path="/content-generator"
@@ -101,6 +116,7 @@ const AppWrapper = () => {
               </PrivateRoute>
             }
           />
+
           <Route
             path="/template-library"
             element={
@@ -109,6 +125,7 @@ const AppWrapper = () => {
               </PrivateRoute>
             }
           />
+
           <Route
             path="/template/:id"
             element={
@@ -117,6 +134,7 @@ const AppWrapper = () => {
               </PrivateRoute>
             }
           />
+
           <Route
             path="/template-edit/:id"
             element={
@@ -125,6 +143,7 @@ const AppWrapper = () => {
               </PrivateRoute>
             }
           />
+
           <Route
             path="/create-template"
             element={
@@ -133,6 +152,7 @@ const AppWrapper = () => {
               </PrivateRoute>
             }
           />
+
           <Route
             path="/content-history"
             element={
@@ -141,6 +161,7 @@ const AppWrapper = () => {
               </PrivateRoute>
             }
           />
+
           <Route
             path="/pricing"
             element={
@@ -200,7 +221,7 @@ const AppWrapper = () => {
             }
           />
 
-          {/* ✅ Admin Layout */}
+          {/* ✅ Admin */}
           <Route
             path="/admin"
             element={
@@ -212,14 +233,11 @@ const AppWrapper = () => {
             <Route index element={<AdminDashboardHome />} />
             <Route path="dashboard" element={<AdminDashboardHome />} />
             <Route path="analytics" element={<AdminAnalyticsDashboard />} />
-            <Route
-              path="content-generator"
-              element={<AdminContentGenerator/>}
-            />
-            <Route path="/admin/content-history" element={<AdminContentHistory />} />
+            <Route path="content-generator" element={<AdminContentGenerator />} />
+            <Route path="content-history" element={<AdminContentHistory />} />
             <Route path="users" element={<AdminUsersData />} />
-            <Route path="history" element={<AdminHistory/>} />
-            <Route path="profile" element={<AdminProfile/>} />
+            <Route path="history" element={<AdminHistory />} />
+            <Route path="profile" element={<AdminProfile />} />
           </Route>
 
           {/* Redirect */}

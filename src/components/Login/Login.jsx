@@ -3,9 +3,6 @@ import { useNavigate } from "react-router-dom";
 import LeftPanel from "./LeftPanel";
 import LoginForm from "./LoginForm";
 
-// ✅ FIXED PATH (Linux-safe)
-import "../../styles.css";
-
 export default function Login() {
   const navigate = useNavigate();
   const [loginError, setLoginError] = useState("");

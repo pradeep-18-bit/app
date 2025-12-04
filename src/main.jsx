@@ -2,8 +2,8 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 
-// ✅ Global CSS (ONE place only)
-import "./styles.css";
+// ✅ Global CSS (correct path + case)
+import "./components/Styles.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

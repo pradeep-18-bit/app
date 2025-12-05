@@ -20,8 +20,9 @@ export default function Login() {
       setLoading(true);
       setLoginError("");
 
+      // ✅ CALL YOUR BACKEND (NO NGROK)
       const response = await fetch(
-        "https://duncan-exclamatory-synaptically.ngrok-free.dev/api/Auth/login",
+        "http://13.201.125.104:5000/api/Auth/login",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -32,25 +33,28 @@ export default function Login() {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.message || "Invalid credentials. Please try again.");
+        throw new Error(data.message || "Invalid credentials");
       }
 
+      // ✅ USER DATA FROM BACKEND
       const userData = {
-        email: email,
-        name: email.split("@")[0],
+        email: data.user.email,
+        role: data.user.role,
         token: data.token,
       };
 
-      // ✅ Save user session
+      // ✅ SAVE SESSION
       localStorage.setItem("currentUser", JSON.stringify(userData));
       localStorage.setItem("token", data.token);
 
-      // ✅ Notify Navbar
+      // ✅ UPDATE NAVBAR STATE
       window.dispatchEvent(
         new CustomEvent("userLoggedIn", { detail: userData })
       );
 
-      navigate("/");
+      // ✅ REDIRECT
+      navigate("/dashboard");
+
     } catch (err) {
       setLoginError(err.message || "Login failed. Please try again.");
     } finally {

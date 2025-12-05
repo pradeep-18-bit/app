@@ -16,11 +16,16 @@ export default function Login() {
       return;
     }
 
+    // ✅ PASSWORD VALIDATION (uppercase required)
+    if (!/(?=.*[A-Z])/.test(password)) {
+      setLoginError("Password must contain at least one uppercase letter.");
+      return;
+    }
+
     try {
       setLoading(true);
       setLoginError("");
 
-      // ✅ CALL YOUR BACKEND (NO NGROK)
       const response = await fetch(
         "http://13.201.125.104:5000/api/Auth/login",
         {
@@ -47,7 +52,7 @@ export default function Login() {
       localStorage.setItem("currentUser", JSON.stringify(userData));
       localStorage.setItem("token", data.token);
 
-      // ✅ UPDATE NAVBAR STATE
+      // ✅ NOTIFY NAVBAR
       window.dispatchEvent(
         new CustomEvent("userLoggedIn", { detail: userData })
       );
@@ -75,3 +80,4 @@ export default function Login() {
     </div>
   );
 }
+

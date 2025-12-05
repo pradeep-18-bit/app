@@ -16,7 +16,7 @@ export default function Login() {
       return;
     }
 
-    // ✅ PASSWORD VALIDATION (uppercase required)
+    // ✅ Password validation
     if (!/(?=.*[A-Z])/.test(password)) {
       setLoginError("Password must contain at least one uppercase letter.");
       return;
@@ -41,24 +41,21 @@ export default function Login() {
         throw new Error(data.message || "Invalid credentials");
       }
 
-      // ✅ USER DATA FROM BACKEND
       const userData = {
         email: data.user.email,
         role: data.user.role,
         token: data.token,
       };
 
-      // ✅ SAVE SESSION
       localStorage.setItem("currentUser", JSON.stringify(userData));
       localStorage.setItem("token", data.token);
 
-      // ✅ NOTIFY NAVBAR
       window.dispatchEvent(
         new CustomEvent("userLoggedIn", { detail: userData })
       );
 
-      // ✅ REDIRECT
-      navigate("/dashboard");
+      // ✅ IMPORTANT FIX
+      navigate("/");
 
     } catch (err) {
       setLoginError(err.message || "Login failed. Please try again.");
@@ -80,4 +77,3 @@ export default function Login() {
     </div>
   );
 }
-
